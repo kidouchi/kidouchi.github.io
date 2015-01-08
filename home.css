@@ -1,0 +1,56 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:700);
+@import url(http://fonts.googleapis.com/css?family=Muli);
+
+div.profile-bg {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+img#skyline {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    display: block;
+    position: absolute;   
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFF;
+    font-family: 'Muli', sans-serif;
+    font-weight: 700;
+    font-size: 350%;
+}
+
+img#mypic {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.resume-block {
+    position: relative;
+}
+
+button.download {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+}
+
+#resume {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
