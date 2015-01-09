@@ -5,26 +5,39 @@
 	<title> Resume </title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="home.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="profile.js"></script> 
 </head>
 
 <body>
     <div class="profile-bg">
-        <h1> Kelly Idouchi </h1>
+<!--        <div class="nav-btn">-->
+<!--            About-->
+<!--        </div>-->
+        <h1 class="myname"> Kelly Idouchi </h1>
+        <div class="icons">
+            <img class="icon" src="facebook-icon.png">
+            <img class="icon" src="linkedin-icon.png">
+            <img class="icon" src="bitbucket-icon.png">
+            <img class="icon" src="github-icon.gif">
+        </div>
         <img id="skyline" src="nycskyline.jpg">
         <img id="mypic" src="profile.jpg">
     </div>
     
-    <span> 
+    <span class="aboutme"> 
         <h2> About Me </h2>
-        <p>I am a programmer . I grew up in New York for most of my life. </p>
+        <p class="about-info"> I am a programmer and dog lover. I grew up in New York for most of my life. Currently, I am a senior at Carnegie Mellon University studying Computer Science. To see some of my projects, checkout the github and bitbucket link above. </p>
     </span>
 
 	<div class="resume-block">
-        <button type="button" class="btn btn-default btn-lg download">
+        <a href="Resume.pdf" type="button" class="btn btn-default btn-lg download">
             <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Download
-        </button>
+        </a>
         <img id="resume" src="Resume.png" width="80%" height="70%">
 	</div>
 </body>
 
+<footer> @ 2015 Kelly Idouchi </footer>
 </html>
