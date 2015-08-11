@@ -36,11 +36,11 @@ div#icons {
     margin-top: 10px;
 }
 img.icon {
-    width: 30px;
-    height: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    opacity: 0.6;
+    width: 40px;
+    height: 40px;
+    margin-left: 7px;
+    margin-right: 7px;
+    opacity: 0.8;
 }
 img.icon:hover{
     opacity: 1;
