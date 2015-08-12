@@ -7,13 +7,17 @@
     <link href="index.css" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<!--    <script src="profile.js"></script> -->
+    <script src="index.js"></script> 
 </head>
 
 <body>
     <!-- PROFILE HEADER -->
-    <div id="profile-bg">
-<!--        <h1 style="color:#000000"> NAVBAR HERE </h1>-->
+    <div class="header" id="top">
+        <div id="navbar">
+            <a href="#section-1">About Me</a>
+            <a href="#section-2">Resume</a>
+            <a href="#section-3">Projects</a>
+        </div>
         <div id="my-name"><h1> Kelly Idouchi </h1></div>
         <div id="icons">
             <a href="http://www.facebook.com/kidouchi"><img class="icon facebook" src="images/icons/facebook-icon.png"></a>
@@ -21,7 +25,7 @@
             <a href="http://www.bitbucket.com/kidouchi"><img class="icon bitbucket" src="images/icons/bitbucket-icon.png"></a>
             <a href="http://www.github.com/kidouchi"><img class="icon github" src="images/icons/github-icon.png"></a>
         </div>
-        <img id="skyline" src="images/nycskyline.jpg">
+        <img id="skyline" src="images/nycskyline-2.jpg">
         <div id="profile-style">
             <div id="white-circle"></div>
             <img id="mypic" src="images/profile.jpg">
@@ -29,29 +33,35 @@
     </div>
 
     <!-- PERSONAL SUMMARY -->
-    <div class="aboutme">
-        <img class="section-img" src="images/icons/face.png"/>
-        <h2> About Me </h2>
-        <p class="info"> I am a programmer and avid learner who likes to work hard and play hard. Whenever I have time, I like to study up on web technologies &amp; various designs techniques. I am a recent graduate from Carnegie Mellon University with a B.S. Computer Science degree. To see some of my projects, check out the github and bitbucket links above. I have recently taken an interest in Android Development.</p>
-        <img id="android-img" src="images/icons/android.png"/>
-    </div>
+    <div class="info-section" id="section-1">
+        <div class="col aboutme">
+            <img class="section-img" src="images/icons/face.png"/>
+            <h2> About Me </h2>
+            <p class="info"> I am a programmer and avid learner who likes to work hard and play hard. Whenever I have time, I like to study up on web technologies &amp; various designs techniques. I am a recent graduate from Carnegie Mellon University with a B.S. Computer Science degree. To see some of my projects, check out the github and bitbucket links above. I have recently taken an interest in Android Development.</p>
+            <img id="android-img" src="images/icons/android.png"/>
+        </div>
 
-    <!-- CLASSES I'VE TAKEN -->
-    <div class="learning">
-        <img class="section-img" src="images/icons/books.png"/>
-        <h2> Learning </h2>
-        <p class="info"> Some classes that I have taken are : <a href="http://www.cs.cmu.edu/~./15-437/2014-fall/">Web Application Development</a>, <a href="http://www.cs.cmu.edu/~15451/">Algorithm Design &amp; Analysis</a>, <a href="http://www.cs.cmu.edu/~ckaestne/15313/2014/">Foundations of Software Engineering</a>, <a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-s13/www/schedule.html">Introduction to Computer Systems</a>, <a href="http://www.cs.cmu.edu/~15-610/">Distributed Systems</a>, <a href="http://www.contrib.andrew.cmu.edu/~okahn/flac-s15/index.html">Formal Languages, Automata &amp; Computation</a>.</p>
-        <p class="info"> I am currently self-learning Android Development, Front End Development, and good Web Designs. </p>
-    </div>
+        <!-- CLASSES I'VE TAKEN -->
+        <div class="col learning">
+            <img class="section-img" src="images/icons/books.png"/>
+            <h2> Learning </h2>
+            <p class="info"> Some classes that I have taken are : <a href="http://www.cs.cmu.edu/~./15-437/2014-fall/">Web Application Development</a>, <a href="http://www.cs.cmu.edu/~15451/">Algorithm Design &amp; Analysis</a>, <a href="http://www.cs.cmu.edu/~ckaestne/15313/2014/">Foundations of Software Engineering</a>, <a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-s13/www/schedule.html">Introduction to Computer Systems</a>, <a href="http://www.cs.cmu.edu/~15-610/">Distributed Systems</a>, <a href="http://www.contrib.andrew.cmu.edu/~okahn/flac-s15/index.html">Formal Languages, Automata &amp; Computation</a>.</p>
+            <p class="info"> I am currently self-learning Android Development, Front End Development, and good Web Designs. </p>
+        </div>
 
-    <!-- WORK SUMMARY -->
-    <div class="work">
-        <img class="section-img" src="images/icons/laptop.png"/>
-        <h2> Work </h2>
-        <p class="info">I interned at Google Adwords where I worked on re-designing and implementing a servlet in order to optimize load times. Prior to that, I researched at Carnegie Mellon's Cylab, where I mainly made finding vulnerabilities like private RSA keys and passwords in routers and networks switches more automated. I also researched at Carnegie Mellon's Collaborative Innovation Center.</p>
+        <!-- WORK SUMMARY -->
+        <div class="col work">
+            <img class="section-img" src="images/icons/laptop.png"/>
+            <h2> Work </h2>
+            <p class="info">I interned at Google Adwords where I worked on re-designing and implementing a servlet in order to optimize load times. Prior to that, I researched at Carnegie Mellon's Cylab, where I mainly made finding vulnerabilities like private RSA keys and passwords in routers and networks switches more automated. I also researched at Carnegie Mellon's Collaborative Innovation Center.</p>
+        </div>
     </div>
-
     <!-- RESUME -->
+    <div class="section-header" id="section-2">
+        <div class="left-divider"></div>
+        <h1> RESUME </h1>
+        <a class="up-button" href="#top"><img src="images/icons/up_arrow.png">TOP</a>
+    </div>
 	<div class="resume-block">
         <div class="download-block">
             <a class="download-btn black" href="Resume.pdf" type="button"> Download</a>
@@ -60,6 +70,13 @@
             <img id="resume" src="images/Resume.png" width="80%" height="70%">
         </div>
 	</div>
+    
+    <div class="section-header" id="section-3"> 
+        <div class="left-divider"></div>
+        <h1> PROJECTS (COMING SOON) </h1>
+        <a class="up-button" href="#top"><img src="images/icons/up_arrow.png">TOP</a>
+    </div>
+    <br><br>
 </body>
 
 <footer> @ 2015 Kelly Idouchi </footer>

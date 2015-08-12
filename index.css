@@ -1,25 +1,49 @@
 @import url(http://fonts.googleapis.com/css?family=Muli);
 
-body {
-    /*background: #000000;*/
+a, a:hover {
+    text-decoration: none;
+    color: #000;
 }
-div#profile-bg {
+a.up-button {
+    display: inline-block;
+    float: right;
+    margin: 20px;
+}
+div.header {
     position: relative;
     margin-bottom: 25px;
     text-align: center;
     margin-bottom: 50px;
 }
+div#navbar {
+    width: 400px;
+    height: 80px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    opacity: 0.5;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%, 0);
+}
+#navbar a {
+    display: inline-block;
+    margin: 10px;
+    margin-top: 20px;
+    font-size: 25px;
+    color: #424242;
+    font-weight:600;
+}
 div#my-name {
     position: absolute;
     display: block;
-    top: 20%;
+    top: 35%;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    /*z-index: 10;*/
 }
-h1 {
+div#my-name h1 {
     text-align: center;
     color: #FFF;
     font-family: 'Muli', sans-serif;
@@ -64,7 +88,7 @@ img.icon.github {
 img#skyline {
     display: block;
     width: 100%;
-    height: 300px;
+    height: 350px;
 /*    opacity: 0.7;*/
     z-index: 0;
 }
@@ -83,18 +107,30 @@ img#android-img {
     float: left;
     width: 33%;
     margin-bottom: 25px;
+    border-right: dotted 1px #000;
 }
 .learning {
     text-align: center;
     width: 33%;
-    display: inline-block;
+    float: left;
     margin-bottom: 25px;
+    border-right: dotted 1px #000;
 }
 .work {
     text-align: center;
     width: 33%;
-    float: right;   
+    float: left;   
     margin-bottom: 25px;
+}
+.info-section {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+}
+.info-section .col {
+    flex: 1;
+    border: 
 }
 div#profile-style {
     display: block;
@@ -126,14 +162,30 @@ img#mypic {
 img.section-img {
     opacity: 0.7;
 }
+
+/* SECTION HEADER */
+.left-divider {
+    display: inline-block;
+    background: #000000;
+    width: 6px;
+    height: 60px;
+    margin-left: 20px;
+    margin-bottom: -15px;
+}
+div.section-header h1 {
+    font-family: 'Muli', sans-serif;
+    font-weight: 700;
+    display: inline;
+}
+
 /* RESUME */
 div.resume-block {
     position: relative;
 }
 .download-block {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 30px;
+    right: 70px;
     z-index: 2;
 }
 a.download-btn {
@@ -141,7 +193,6 @@ a.download-btn {
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 22px;
-    text-decoration: none;
     right: 100px;
     color: #fff;
 }
@@ -181,12 +232,6 @@ footer {
     color: #FFF;
     margin-top: 10px;
 }
-
-/*.nav-btn {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;   
-}*/
 
 
 
