@@ -7,18 +7,19 @@
     <link href="index.css" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="profile.js"></script> 
+<!--    <script src="profile.js"></script> -->
 </head>
 
 <body>
     <!-- PROFILE HEADER -->
     <div id="profile-bg">
+<!--        <h1 style="color:#000000"> NAVBAR HERE </h1>-->
         <div id="my-name"><h1> Kelly Idouchi </h1></div>
         <div id="icons">
-            <a href="http://www.facebook.com/kidouchi"><img class="icon" src="images/icons/facebook-icon.png"></a>
-            <a href="https://www.linkedin.com/pub/kelly-idouchi/65/4ab/a43"><img class="icon" src="images/icons/linkedin-icon.png"></a>
-            <a href="http://www.bitbucket.com/kidouchi"><img class="icon" src="images/icons/bitbucket-icon.png"></a>
-            <a href="http://www.github.com/kidouchi"><img class="icon" src="images/icons/github-icon.png"></a>
+            <a href="http://www.facebook.com/kidouchi"><img class="icon facebook" src="images/icons/facebook-icon.png"></a>
+            <a href="https://www.linkedin.com/pub/kelly-idouchi/65/4ab/a43"><img class="icon linkedin" src="images/icons/linkedin-icon.png"></a>
+            <a href="http://www.bitbucket.com/kidouchi"><img class="icon bitbucket" src="images/icons/bitbucket-icon.png"></a>
+            <a href="http://www.github.com/kidouchi"><img class="icon github" src="images/icons/github-icon.png"></a>
         </div>
         <img id="skyline" src="images/nycskyline.jpg">
         <div id="profile-style">
@@ -31,7 +32,7 @@
     <div class="aboutme">
         <img class="section-img" src="images/icons/face.png"/>
         <h2> About Me </h2>
-        <p class="info"> I am a programmer and experimenter. Whenever I have time, I like to study up on my web technologies &amp; designs techniques. I am a recent graduate from Carnegie Mellon University with a B.S. Computer Science degree. To see some of my projects, check out the github and bitbucket links above. I have recently taken an interest in Android Development.</p>
+        <p class="info"> I am a programmer and avid learner who likes to work hard and play hard. Whenever I have time, I like to study up on web technologies &amp; various designs techniques. I am a recent graduate from Carnegie Mellon University with a B.S. Computer Science degree. To see some of my projects, check out the github and bitbucket links above. I have recently taken an interest in Android Development.</p>
         <img id="android-img" src="images/icons/android.png"/>
     </div>
 
@@ -47,15 +48,17 @@
     <div class="work">
         <img class="section-img" src="images/icons/laptop.png"/>
         <h2> Work </h2>
-        <p class="info">Last summer, I interned at Google Adwords where I worked on re-designing and implementing a servlet in order to optimize load times. Prior to that, I researched at Carnegie Mellon's Cylab, where I mainly made finding vulnerabilities like private RSA keys and passwords in routers and networks switches more automated. I also researched at Carnegie Mellon's Collaborative Innovation Center.</p>
+        <p class="info">I interned at Google Adwords where I worked on re-designing and implementing a servlet in order to optimize load times. Prior to that, I researched at Carnegie Mellon's Cylab, where I mainly made finding vulnerabilities like private RSA keys and passwords in routers and networks switches more automated. I also researched at Carnegie Mellon's Collaborative Innovation Center.</p>
     </div>
 
     <!-- RESUME -->
 	<div class="resume-block">
-        <!-- <div id="download-button">
-            <a href="Resume.pdf" type="button" class="btn btn-default btn-lg glyphicon glyphicon-save">Download</a>
-        </div> -->
-        <img id="resume" src="images/Resume.png" width="80%" height="70%">
+        <div class="download-block">
+            <a class="download-btn black" href="Resume.pdf" type="button"> Download</a>
+        </div>
+        <div class="resume-block">
+            <img id="resume" src="images/Resume.png" width="80%" height="70%">
+        </div>
 	</div>
 </body>
 

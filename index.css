@@ -7,6 +7,7 @@ div#profile-bg {
     position: relative;
     margin-bottom: 25px;
     text-align: center;
+    margin-bottom: 50px;
 }
 div#my-name {
     position: absolute;
@@ -29,29 +30,43 @@ div#icons {
     position: absolute;
     left: 0;
     right: 0;
-    top: 43%;
+    bottom: 8px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
-    margin-top: 10px;
 }
 img.icon {
-    -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: scale(1.3);
-    width: 40px;
-    height: 40px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
     margin-left: 7px;
     margin-right: 7px;
     opacity: 0.8;
 }
 img.icon:hover{
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
     opacity: 1;
+}
+img.icon.facebook {
+    margin-right: 20px;
+}
+img.icon.linkedin {
+    margin-right: 115px;
+}
+img.icon.bitbucket {
+    margin-left: 115px;
+}
+img.icon.github {
+    margin-left: 20px;
 }
 img#skyline {
     display: block;
     width: 100%;
-    height: 500px;
+    height: 300px;
+/*    opacity: 0.7;*/
+    z-index: 0;
 }
 p.info {
     font-weight: 200;
@@ -111,22 +126,52 @@ img#mypic {
 img.section-img {
     opacity: 0.7;
 }
+/* RESUME */
 div.resume-block {
     position: relative;
 }
-div#download-button{
+.download-block {
     position: absolute;
-    top: 10%;
-    right: 15%;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+a.download-btn {
+    width: 140px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 22px;
+    text-decoration: none;
+    right: 100px;
+    color: #fff;
+}
+.download-btn:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+    color: white;
+}
+.black {
+    background-color: #424242;
+    box-shadow: 0px 5px 0px 0px #616161;
+}
+.black:hover {
+    color: white;
+    background-color: #757575;
+}
+.resume-block {
+    position: absolute;
+    margin: 50px;
 }
 img#resume {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    height: 100%;
     border-style: ridge;
     border-radius: 1%;
     border: 8px solid #333;
 }
+/* FOOOTER */
 footer {
     padding-top: 3%;
     padding-bottom: 3%;
