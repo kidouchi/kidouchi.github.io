@@ -36,6 +36,9 @@ div#icons {
     margin-top: 10px;
 }
 img.icon {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
     width: 40px;
     height: 40px;
     margin-left: 7px;
@@ -87,7 +90,7 @@ div#profile-style {
     margin-left: auto;
     margin-right: auto;
 }
-div#white-circle{
+div#white-circle {
     position: absolute;
     display: block;
     width: 160px;
