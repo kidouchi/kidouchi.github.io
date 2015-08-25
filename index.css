@@ -45,10 +45,13 @@ div#my-name {
 }
 div#my-name h1 {
     text-align: center;
-    color: #FFF;
+    color: #fff;
     font-family: 'Muli', sans-serif;
     font-weight: 700;
     font-size: 350%;
+    text-shadow: 0 0 14px #000; /* horizontal-offset vertical-offset 'blur' colour */
+    -moz-text-shadow: 0 0 2px #000;
+    -webkit-text-shadow: 0 0 2px #000;
 }
 div#icons {
     position: absolute;
