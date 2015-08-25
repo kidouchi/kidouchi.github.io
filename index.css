@@ -17,21 +17,21 @@ div.header {
 }
 div#navbar {
     width: 400px;
-    height: 80px;
+    height: 60px;
     border-radius: 10px;
     background: #FFFFFF;
     opacity: 0.5;
     position: absolute;
-    left: 50%;
+    left: 20px;
     top: 20px;
-    transform: translate(-50%, 0);
+/*    transform: translate(-50%, 0);*/
 }
 #navbar a {
     display: inline-block;
     margin: 10px;
-    margin-top: 20px;
+    margin-top: 12px;
     font-size: 25px;
-    color: #424242;
+    color: #000;
     font-weight:600;
 }
 div#my-name {
@@ -230,6 +230,35 @@ img#resume {
     border-radius: 1%;
     border: 8px solid #333;
 }
+
+div#temp-android {
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+h1#coming-soon-header {
+    position: absolute;
+    text-align: center;
+    display: block;
+    width: 300px;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-weight: 500;
+}
+
+img#android-project {
+    position: absolute;
+    display: block;
+    width: 200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
 /* FOOOTER */
 footer {
     padding-top: 3%;
