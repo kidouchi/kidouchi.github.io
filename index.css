@@ -58,8 +58,6 @@ div#icons {
     left: 0;
     right: 0;
     bottom: 8px;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 10px;
 }
 img.icon {
@@ -92,6 +90,23 @@ img.icon.bitbucket {
 }
 img.icon.github {
     margin-left: 20px;
+}
+@media (max-width: 520px) {
+    img.icon { 
+        width: 40px;
+        height: 40px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    img.icon.linkedin {
+        margin-right: 60px;
+    }
+    img.icon.facebook {
+        margin-right: 10px;
+    }
+    img.icon.github {
+        margin-left: 10px;
+    }
 }
 img#skyline {
     display: block;
@@ -131,14 +146,15 @@ img#android-img {
     margin-bottom: 25px;
 }
 .info-section {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    overflow: hidden;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
 }
 .info-section .col {
     flex: 1;
-    border: 
+    min-width: 300px;
 }
 div#profile-style {
     display: block;
