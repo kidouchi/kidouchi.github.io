@@ -100,7 +100,7 @@ img.icon.bitbucket {
 img.icon.github {
     margin-left: 20px;
 }
-@media (max-width: 520px) {
+@media (max-width: 530px) {
     img.icon { 
         width: 40px;
         height: 40px;
