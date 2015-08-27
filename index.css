@@ -5,9 +5,18 @@ a, a:hover {
     color: #000;
 }
 a.up-button {
-    display: inline-block;
     float: right;
     margin: 20px;
+     transition: transform 200ms ease-out;
+    -webkit-transform:rotate(0deg);
+    -o-transform:rotate(0deg);
+    -ms-transform:rotate(0deg);
+}
+a.up-button:hover {
+    transition: transform 200ms ease-out;
+    -webkit-transform:rotate(180deg);
+    -o-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
 }
 div.header {
     position: relative;
