@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Muli);
 
-a, a:hover {
+a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: #000;
 }
@@ -311,6 +311,12 @@ img#android-project {
     background: url(images/icons/apple_watermark.png) no-repeat;
     background-position: center;
 }
+.app-card.django {
+    background: url("images/icons/django_watermark.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #86AD95;
+    background-position: center;
+}
 .project-section {
     display: flex;
     flex-wrap: wrap;
@@ -326,6 +332,11 @@ a.app_redirect_button {
     border-radius: 5px;
     padding: 5px;
 }
+a.app_redirect_button:active {
+    transform: translate(0px, 2px);
+    -webkit-transform: translate(0px, 2px);
+    box-shadow: 0px 1px 0px 0px;
+}
 a.app_redirect_button.android {
     border: 2px solid #689F38;
     background-color: #8BC34A;
@@ -333,9 +344,6 @@ a.app_redirect_button.android {
 }
 a.app_redirect_button.android:active {
     background-color: #689F38;
-    transform: translate(0px, 5px);
-    -webkit-transform: translate(0px, 5px);
-    box-shadow: 0px 1px 0px 0px;
 }
 a.app_redirect_button.apple {
     border: 2px solid #424242;
@@ -344,9 +352,14 @@ a.app_redirect_button.apple {
 }
 a.app_redirect_button.apple:active {
     background-color: #424242;
-    transform: translate(0px, 5px);
-    -webkit-transform: translate(0px, 5px);
-    box-shadow: 0px 1px 0px 0px;
+}
+a.app_redirect_button.django {
+    border: 2px solid #336644;
+    background-color: #44885B;
+    box-shadow: 0px 4px 0px 0px #336644;
+}
+a.app_redirect_button.django:active {
+    background-color: #336644;
 }
 /* FOOOTER */
 footer {
