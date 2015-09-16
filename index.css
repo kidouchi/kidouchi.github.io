@@ -5,19 +5,27 @@ a, a:hover, a:focus, a:active {
     color: #000;
 }
 a.up-button {
-    float: right;
-    margin-right: 20px;
-     transition: transform 200ms ease-out;
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    z-index: 2;
+    transition: transform 200ms ease-out;
     -webkit-transform:rotate(0deg);
     -o-transform:rotate(0deg);
     -ms-transform:rotate(0deg);
 }
+img#up-btn-img {
+    width: 100px;
+    height: 100px;
+}
+/*
 a.up-button:hover {
     transition: transform 200ms ease-out;
     -webkit-transform:rotate(180deg);
     -o-transform:rotate(180deg);
     -ms-transform:rotate(180deg);
 }
+*/
 div.header {
     position: relative;
     text-align: center;
@@ -31,10 +39,13 @@ div#navbar {
     position: absolute;
 }
 div#navbar ul {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
     margin-top: 5px;
 }
 div#navbar ul.group li:not(#magic-line) {
-    padding: 20px;
+    padding: 10px;
     display: inline;
 }
 #navbar a {
@@ -317,6 +328,14 @@ img#android-project {
 .app-card.android {
     background: url(images/icons/android_watermark.png); 
 }
+.app-card.android img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 180px;
+    height: 180px;
+}
 .app-card.apple {
     background: url(images/icons/apple_watermark.png) no-repeat;
     background-position: center;
@@ -326,6 +345,14 @@ img#android-project {
     background-size: 100% auto;
     background-color: #86AD95;
     background-position: center;
+}
+.app-card.django img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 57px;
+    border-radius: 20px;
 }
 .project-section {
     display: flex;
