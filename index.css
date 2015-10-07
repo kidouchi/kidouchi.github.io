@@ -32,29 +32,40 @@ div.header {
     margin-bottom: 50px;
 }
 div#navbar {
-    width: 100%;
-    height: 50px;
-    background: #000;
-    opacity: 0.5;
-    position: absolute;
+    height: 100%;
+    width: 18%;
+    margin-right: 10px;
+/*    float: left;*/
+    position: fixed;
+/*    flex-grow: 1;*/
 }
 div#navbar ul {
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
-    margin-top: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    list-style: none;
+    padding: 0;
+    margin: 0 auto auto 0;
 }
 div#navbar ul.group li:not(#magic-line) {
-    padding: 10px;
-    display: inline;
+    padding: 0 5px 5px 0;
+    margin: 0 10px 10px 0;
 }
 #navbar a {
-/*    display: inline-block;*/
     margin: 20px;
     margin-top: 12px;
-    font-size: 25px;
-    color: #fff;
-    font-weight: 400;
+    font-size: 24px;
+    color: #424242;
+    font-weight: 600;
+}
+div.page-body {
+    width: 84%;
+/*    flex-grow: 5;*/
+    float: right;
+}
+div.main-body {
+/*    display: flex;*/
+    display: inline-block;
+    position: relative;
 }
 #magic-line { 
     position: absolute; 
@@ -63,7 +74,6 @@ div#navbar ul.group li:not(#magic-line) {
     height: 2px; 
     background: #fff; 
 }
-
 div#my-name {
     position: absolute;
     display: block;
@@ -97,7 +107,7 @@ img.icon {
     margin-left: 7px;
     margin-right: 7px;
     opacity: 0.8;
-    transition: transform 200ms ease-out;
+    transition: transform 200ms ease-in;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
@@ -157,30 +167,31 @@ img#android-img {
 }
 .aboutme {
     text-align: center;
-    float: left;
-    width: 33%;
+/*    float: left;*/
+/*    width: 33%;*/
     margin-bottom: 25px;
     border-right: dotted 1px #000;
 }
 .learning {
     text-align: center;
-    width: 33%;
-    float: left;
+/*    width: 33%;*/
+/*    float: left;*/
     margin-bottom: 25px;
     border-right: dotted 1px #000;
 }
 .work {
     text-align: center;
-    width: 33%;
-    float: left;   
+/*    width: 33%;*/
+/*    float: left;   */
     margin-bottom: 25px;
 }
 .info-section {
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        overflow: hidden;
-        flex-wrap: wrap;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin-left: 10px;
 }
 .info-section .col {
     flex: 1;
@@ -408,12 +419,3 @@ footer {
     color: #FFF;
     margin-top: 10px;
 }
-
-
-
-
-
-
-
-
-

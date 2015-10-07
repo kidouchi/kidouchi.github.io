@@ -13,13 +13,6 @@
 <body>
     <!-- PROFILE HEADER -->
     <div class="header" id="top">
-        <div id="navbar">
-            <ul class="group header-items">
-                <li class="current-item"><a href="#section-1">About Me</a></li>
-                <li><a href="#section-2">Resume</a></li>
-                <li><a href="#section-3">Projects</a></li>
-            </ul>
-        </div>
         <div id="my-name"><h1> Kelly Idouchi </h1></div>
         <div id="icons">
             <a href="http://www.facebook.com/kidouchi"><img class="icon facebook" src="images/icons/facebook-icon.png"></a>
@@ -34,68 +27,81 @@
         </div>
     </div>
 
-    <!-- PERSONAL SUMMARY -->
-    <div class="info-section" id="section-1">
-        <div class="col aboutme">
-            <img class="section-img" src="images/icons/face.png"/>
-            <h2> About Me </h2>
-            <p class="info"> I am a programmer and avid learner who likes to work hard and play hard. Whenever I have time, I like to study up on web technologies &amp; various designs techniques. I am a recent graduate from Carnegie Mellon University with a B.S. Computer Science degree. To see some of my projects, check out the github and bitbucket links above. I have recently taken an interest in Android Development.</p>
-            <img id="android-img" src="images/icons/android.png"/>
+    <div class="main-body flex-container">
+        <div id="navbar" class="flex-item">
+            <ul class="group header-items">
+                <li id="about-item"><a href="#section-1">About</a></li>
+                <li id="resume-item"><a href="#section-2">Resume</a></li>
+                <li id="project-item"><a href="#section-3">Projects</a></li>
+            </ul>
         </div>
+        <div class="page-body flex-item">
+            <!-- PERSONAL SUMMARY -->
+            <div class="info-section" id="section-1">
+                <div class="col aboutme">
+                    <img class="section-img" src="images/icons/face.png"/>
+                    <h2> About Me </h2>
+                    <p class="info"> I am a programmer and avid learner who likes to work hard and play hard. Whenever I have time, I like to study up on web technologies &amp; various designs techniques. I am a recent graduate from Carnegie Mellon University with a B.S. Computer Science degree. To see some of my projects, check out the github and bitbucket links above. I have recently taken an interest in Android Development.</p>
+                    <img id="android-img" src="images/icons/android.png"/>
+                </div>
 
-        <!-- CLASSES I'VE TAKEN -->
-        <div class="col learning">
-            <img class="section-img" src="images/icons/books.png"/>
-            <h2> Learning </h2>
-            <p class="info"> Some classes that I have taken are : <a href="http://www.cs.cmu.edu/~./15-437/2014-fall/">Web Application Development</a>, <a href="http://www.cs.cmu.edu/~15451/">Algorithm Design &amp; Analysis</a>, <a href="http://www.cs.cmu.edu/~ckaestne/15313/2014/">Foundations of Software Engineering</a>, <a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-s13/www/schedule.html">Introduction to Computer Systems</a>, <a href="http://www.cs.cmu.edu/~15-610/">Distributed Systems</a>, <a href="http://www.contrib.andrew.cmu.edu/~okahn/flac-s15/index.html">Formal Languages, Automata &amp; Computation</a>.</p>
-            <p class="info"> I am currently self-learning Android Development, Front End Development, and good Web Designs. </p>
-        </div>
+                <!-- CLASSES I'VE TAKEN -->
+                <div class="col learning">
+                    <img class="section-img" src="images/icons/books.png"/>
+                    <h2> Learning </h2>
+                    <p class="info"> Some classes that I have taken are : <a href="http://www.cs.cmu.edu/~./15-437/2014-fall/">Web Application Development</a>, <a href="http://www.cs.cmu.edu/~15451/">Algorithm Design &amp; Analysis</a>, <a href="http://www.cs.cmu.edu/~ckaestne/15313/2014/">Foundations of Software Engineering</a>, <a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-s13/www/schedule.html">Introduction to Computer Systems</a>, <a href="http://www.cs.cmu.edu/~15-610/">Distributed Systems</a>, <a href="http://www.contrib.andrew.cmu.edu/~okahn/flac-s15/index.html">Formal Languages, Automata &amp; Computation</a>.</p>
+                    <p class="info"> I am currently interested in Android Development, Front End Development, and good Web Design Practices. </p>
+                </div>
 
-        <!-- WORK SUMMARY -->
-        <div class="col work">
-            <img class="section-img" src="images/icons/laptop.png"/>
-            <h2> Work </h2>
-            <p class="info">I interned at Google Adwords where I worked on re-designing and implementing a servlet in order to optimize load times. Prior to that, I researched at Carnegie Mellon's Cylab, where I mainly made finding vulnerabilities like private RSA keys and passwords in routers and networks switches more automated. I also researched at Carnegie Mellon's Collaborative Innovation Center.</p>
+                <!-- WORK SUMMARY -->
+                <div class="col work">
+                    <img class="section-img" src="images/icons/laptop.png"/>
+                    <h2> Work </h2>
+                    <p class="info">I interned at Google Adwords where I worked on re-designing and implementing a servlet in order to optimize load times. Prior to that, I researched at Carnegie Mellon's Cylab, where I mainly made finding vulnerabilities like private RSA keys and passwords in routers and networks switches more automated. I also researched at Carnegie Mellon's Collaborative Innovation Center.</p>
+                </div>
+            </div>
+            <!-- RESUME -->
+            <div class="section-header" id="section-2">
+                <div class="left-divider"></div>
+                <h1> RESUME </h1>
+            </div>
+            <div class="resume-block">
+                <div class="download-block">
+                    <a class="download-btn black" href="Resume.pdf" type="button"> Download</a>
+                </div>
+                <div class="resume-block">
+                    <img id="resume" src="images/Resume.png" width="80%" height="70%">
+                </div>
+            </div>
+
+            <div class="section-header" id="section-3"> 
+                <div class="left-divider"></div>
+                <h1> PROJECTS </h1>
+            </div>
+
+            <div class="project-section">
+            <!-- NoteIt Android App Card -->
+            <div class="app-card android">
+                NoteIt <img src="images/icons/note_it.png"/>
+                <a class="app_redirect_button android" type="button" href="https://play.google.com/store/apps/details?id=kidouchi.project.noteit">Visit Site</a>
+            </div>
+
+            <div class="app-card django">
+                Grumblr
+                <img src="images/icons/grumblr.png"/>
+                <a class="app_redirect_button django" type="button" href="https://kidouchi-grumblr.herokuapp.com/">Visit Site</a>
+            </div>
+        </div> 
         </div>
-    </div>
-    <!-- RESUME -->
-    <div class="section-header" id="section-2">
-        <div class="left-divider"></div>
-        <h1> RESUME </h1>
-    </div>
-	<div class="resume-block">
-        <div class="download-block">
-            <a class="download-btn black" href="Resume.pdf" type="button"> Download</a>
-        </div>
-        <div class="resume-block">
-            <img id="resume" src="images/Resume.png" width="80%" height="70%">
-        </div>
-	</div>
+    </div> <!-- .main-body -->
     
-    <div class="section-header" id="section-3"> 
-        <div class="left-divider"></div>
-        <h1> PROJECTS </h1>
-    </div>
-    
-    <div class="project-section">
-        <!-- NoteIt Android App Card -->
-        <div class="app-card android">
-            NoteIt <img src="images/icons/note_it.png"/>
-            <a class="app_redirect_button android" type="button" href="https://play.google.com/store/apps/details?id=kidouchi.project.noteit">Visit Site</a>
-        </div>
-        
-        <div class="app-card django">
-            Grumblr
-            <img src="images/icons/grumblr.png"/>
-            <a class="app_redirect_button django" type="button" href="https://kidouchi-grumblr.herokuapp.com/">Visit Site</a>
-        </div>
-    </div> 
-    
+<!--
     <div id="up-button">
         <a class="up-button" href="#section-3">
             <img id="up-btn-img" src="images/icons/down_arrow.png"/>
         </a>
     </div>
+-->
 </body>
 
 <!-- ******* Deprecated Code (Possibly use later) *******-->
