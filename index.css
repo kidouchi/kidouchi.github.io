@@ -192,6 +192,7 @@ img#android-img {
     overflow: hidden;
     flex-wrap: wrap;
     margin-left: 10px;
+    margin-bottom: 20px;
 }
 .info-section .col {
     flex: 1;
@@ -409,6 +410,79 @@ a.app_redirect_button.django {
 a.app_redirect_button.django:active {
     background-color: #336644;
 }
+
+.scroll-view-animate-elem {
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    
+    -moz-transform: translate3d(0px, 200px, 0px);
+    -webkit-transform: translate3d(0px, 200px, 0px);
+    -o-transform: translate(0px, 200px);
+    -ms-transform: translate(0px, 200px);
+    transform: translate3d(0px, 200, 0px);
+    
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.scroll-view-animate-elem.in-view {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+}
+
+/*
+.fadeIn{
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;	
+
+	animation-duration: 0.8s;	
+	-webkit-animation-duration: 0.8s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes fadeIn {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;		
+	}
+    80% {
+        transform: scale(1.1);
+        opacity: 1;	
+    }
+	100% {
+		transform: scale(1);
+		opacity: 1;	
+	}		
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		-webkit-transform: scale(0);
+		opacity: 0.0;		
+	}
+    80% {
+        -webkit-transform: scale(1.1);
+        opacity: 1;	
+    }
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;	
+	}		
+}
+*/
+
 /* FOOOTER */
 footer {
     padding-top: 3%;
