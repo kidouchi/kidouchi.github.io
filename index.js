@@ -90,6 +90,7 @@ $(document).ready(function () {
     
     var $anim_elems = $(".scroll-view-animate-elem");
     
+    //  helps fade in animation when container in view
     function check_in_view() {
         var window_height = $window.height();
         var window_top = $window.scrollTop();
@@ -103,9 +104,10 @@ $(document).ready(function () {
             
             if ((elem_bottom >= window_top) && (elem_top <= window_bottom)) {
                 $elem.addClass("in-view");
-            } else {
-                $elem.removeClass("in-view");
             }
+//            } else {
+//                $elem.removeClass("in-view");
+//            }
         });
     }
     
