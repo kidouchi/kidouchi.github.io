@@ -1,6 +1,15 @@
 $(document).ready(function () {
     var $window = $(window);
     
+    var $contactMe = $("#contact-me");
+    $("#contact-me").hover(
+        function() {
+            $contactMe.removeClass("clear-out");
+        }, 
+        function () {
+            $contactMe.addClass("clear-out");
+        });
+    
     $(window).scroll(function() {
         /* TODO: Refactor using helper functions */
         /* Navbar header animation as user scrolls to certain sections */

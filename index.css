@@ -80,7 +80,6 @@ div#my-name {
     margin-left: auto;
     margin-right: auto;
 }
-/*div#my-name */
 h1 {
     text-align: center;
     color: #fff;
@@ -106,14 +105,8 @@ div#icons {
     margin-right: 7px;
     opacity: 0.8;
     border-radius: 5px;
-    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84,      0.44, 1);
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-/*
-    transition: transform 200ms ease-in;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-*/
 }
 .icon:after {
     content: "";
@@ -139,6 +132,7 @@ img.icon.bitbucket {
     margin-left: 115px;
 }
 img.icon.github {
+    padding: 5px;
     background-color: black;
     margin-left: 20px;
 }
@@ -234,6 +228,64 @@ img#mypic {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+#contact-me {
+    position: absolute;
+    display: block;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    opacity: 0;
+    background-image: url("images/icons/ic_mail_outline_white_36px.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.clear-out {
+    animation: scaleClear 0.6s ease-in;
+    -webkit-animation: scaleClear 0.6s ease-in;
+}
+#contact-me:hover {
+    animation: scaleBlack 0.6s ease-out;
+	-webkit-animation: scaleBlack 0.6s ease-out;
+
+	visibility: visible !important;	
+    opacity: 0.6;
+}
+@keyframes scaleBlack {
+	0% {
+		opacity: 0.0;		
+	}
+	100% {
+		opacity: 0.6;	
+	}		
+}
+@keyframes scaleClear {
+    0% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.0;
+    }
+}
+@-webkit-keyframes scaleBlack {
+	0% {
+		opacity: 0.0;		
+	}
+	100% {
+		opacity: 0.6;	
+	}		
+}
+@-webkit-keyframes scaleClear {
+    0% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.0;
+    }
 }
 img.section-img {
     opacity: 0.7;
@@ -466,7 +518,8 @@ a.app_redirect_button.django:active {
     background-image: url("images/new-york-city-grayscale.png");
 }
 .parallax-fixed-bg.fixed-bg-2 {
-    background-image: url("images/brooklyn-bridge-at-night.png");
+/*    background-image: url("images/brooklyn-bridge-at-night.jpeg");*/
+    background-image: url("images/test1.jpeg");
     filter: sepia(0.65);
     -webkit-filter: sepia(0.65);
     -moz-filter: sepia(0.65);
@@ -474,7 +527,7 @@ a.app_redirect_button.django:active {
     -ms-filter: sepia(0.65);
 }
 .parallax-fixed-bg.fixed-bg-3 {
-    background-image: url("images/new-york-city-night.png");
+    background-image: url("images/new-york-city-night.jpeg");
     filter: sepia(0.65);
     -webkit-filter: sepia(0.65);
     -moz-filter: sepia(0.65);
