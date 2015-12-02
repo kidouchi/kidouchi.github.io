@@ -518,8 +518,7 @@ a.app_redirect_button.django:active {
     background-image: url("images/new-york-city-grayscale.png");
 }
 .parallax-fixed-bg.fixed-bg-2 {
-/*    background-image: url("images/brooklyn-bridge-at-night.jpeg");*/
-    background-image: url("images/test1.jpeg");
+    background-image: url("images/brooklyn-bridge-at-night-progressive.jpeg");
     filter: sepia(0.65);
     -webkit-filter: sepia(0.65);
     -moz-filter: sepia(0.65);
@@ -527,7 +526,7 @@ a.app_redirect_button.django:active {
     -ms-filter: sepia(0.65);
 }
 .parallax-fixed-bg.fixed-bg-3 {
-    background-image: url("images/new-york-city-night.jpeg");
+    background-image: url("images/new-york-city-night-progressive.jpeg");
     filter: sepia(0.65);
     -webkit-filter: sepia(0.65);
     -moz-filter: sepia(0.65);

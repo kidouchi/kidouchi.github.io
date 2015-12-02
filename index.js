@@ -1,6 +1,21 @@
 $(document).ready(function () {
     var $window = $(window);
     
+    var $section1 = $("#section-1");
+    var $section2 = $("#section-2");
+    var $section3 = $("#section-3");
+
+    // Hide the page initially
+    $section1.hide();
+    $section2.hide();
+    $section3.hide();
+
+    $window.on("load", function() {
+        $section1.show();
+        $section2.show();
+        $section3.show();    
+    });
+    
     var $contactMe = $("#contact-me");
     $("#contact-me").hover(
         function() {
@@ -13,9 +28,6 @@ $(document).ready(function () {
     $(window).scroll(function() {
         /* TODO: Refactor using helper functions */
         /* Navbar header animation as user scrolls to certain sections */
-        var $section1 = $("#section-1");
-        var $section2 = $("#section-2");
-        var $section3 = $("#section-3");
         if ($window.scrollTop() >= ($section1.offset().top-400)
            && $window.scrollTop() < ($section2.offset().top-200)) {
             $("#about-item").css({
