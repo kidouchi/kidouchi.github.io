@@ -13,6 +13,8 @@
 </head>
 
 <body>
+    
+
     <!-- PROFILE HEADER -->
     <div class="header" id="top">
         <div id="my-name"><h1> Kelly Idouchi </h1></div>
@@ -26,10 +28,27 @@
         <div id="profile-style">
             <div class="profile-border-circle"></div>
             <img id="mypic" src="images/profile.jpg">
-            <a id="contact-me"></a>
+            <a id="contact-me"><img width="100px" height="100px" src="images/icons/ic_mail_outline_white_36px.svg"/></a>
         </div>
     </div>
 
+    <!-- Contact Form Modal -->
+    <div id="modal" class="modal-view" data-backdrop="static">
+        <div id="contact-modal" class="window">
+            <div class="contents">
+                <h2>Hit me up!</h2>
+                <form action="//formspree.io/kidouchi@andrew.cmu.edu"
+                      method="POST">
+                    <input type="email" name="_replyto" placeholder="Your Email"><br>
+                    <textarea name="message" rows="5" placeholder="Your Message"></textarea><br>
+                    <input type="text" name="_gotcha" style="display:none" />
+                    <button id="modal-send-btn" type="submit" value="Send">Send</button>
+                    <a id="close-modal">Close</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    
     <div class="main-body flex-container">
         <div id="navbar" class="flex-item">
             <ul class="group header-items">

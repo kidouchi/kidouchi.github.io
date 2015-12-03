@@ -6,24 +6,42 @@ $(document).ready(function () {
     var $section3 = $("#section-3");
 
     // Hide the page initially
-    $section1.hide();
-    $section2.hide();
-    $section3.hide();
-
-    $window.on("load", function() {
-        $section1.show();
-        $section2.show();
-        $section3.show();    
-    });
+//    $section1.hide();
+//    $section2.hide();
+//    $section3.hide();
+//
+//    $window.on("load", function() {
+//        $section1.show();
+//        $section2.show();
+//        $section3.show();    
+//    });
     
     var $contactMe = $("#contact-me");
-    $("#contact-me").hover(
+    $contactMe.hover(
         function() {
             $contactMe.removeClass("clear-out");
         }, 
         function () {
             $contactMe.addClass("clear-out");
         });
+
+    var tooltipOpen = false;
+    $contactMe.on("click", function() {
+            console.log("Pressed");
+            if (!tooltipOpen) {
+                $("#modal").addClass("modal-in-view");
+                $("body").css({'z-index' : '-1'});
+                tooltipOpen = true;
+            } else {
+                $("#modal").removeClass("modal-in-view");
+                tooltipOpen = false;
+            }
+        });
+    
+    $("#close-modal").on("click", function() {
+        $("#modal").removeClass("modal-in-view");
+        tooltipOpen = false;
+    });
     
     $(window).scroll(function() {
         /* TODO: Refactor using helper functions */
