@@ -36,11 +36,11 @@
     <div id="modal" class="modal-view" data-backdrop="static">
         <div id="contact-modal" class="window">
             <div class="contents">
-                <div class="form-container">
+                <div class="message-container">
                     <h2>Message me!</h2>
                     <form id="message-form">
-                        <input type="email" name="_replyto" placeholder="Your Email"><br>
-                        <textarea name="message" rows="5" placeholder="Your Message"></textarea><br>
+                        <input type="email" name="_replyto" placeholder="Your Email" required><br>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea><br>
                         <input type="text" name="_gotcha" style="display:none" />
                         <input type="hidden" name="_next" value="email-sent-page.html" />
                         <button id="modal-send-btn" type="submit" value="Send">Send</button>

@@ -28,6 +28,11 @@ $(document).ready(function () {
     var tooltipOpen = false;
     $contactMe.on("click", function() {
             if (!tooltipOpen) {
+                // Reset form before showing modal
+                $(".success-message").hide();
+                $(".message-container").show();
+                $("#message-form")[0].reset(); 
+                // Show modal
                 $("#modal").addClass("modal-in-view");
                 $("body").css({'z-index' : '-1'});
                 tooltipOpen = true;
@@ -43,7 +48,6 @@ $(document).ready(function () {
     });
     
     // Initially success message is hidden
-    $(".success-message").hide();
     $("#message-form").on("submit", function(e) {
         e.preventDefault();
         $.ajax({
@@ -52,17 +56,13 @@ $(document).ready(function () {
             data: {message: $("textarea[name='message']").val()},
             dataType: "json"
         }).success(function(data) {
-            console.log("YES");
-            $(".form-container").hide();
+            console.log("SUCCESS");
+            $(".message-container").hide();
             $(".success-message").show();
             window.setTimeout(function() {
                 $("#modal").removeClass("modal-in-view");
                 tooltipOpen = false;
             }, 1000);
-            // After window closes, reset modal
-            $(".form-container").show();
-            $("#message-form")[0].reset();
-            $(".success-message").hide();
         });
     });
     
