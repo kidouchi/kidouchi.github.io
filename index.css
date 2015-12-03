@@ -273,6 +273,9 @@ img#mypic {
     background: #FFF;
     padding: 10px;
 }
+input[name="_gotcha"] {
+    visibility: hidden;
+}
 .modal-view {
     top: -600px;    
     visibility: hidden;
@@ -330,6 +333,10 @@ img#mypic {
     color: #FCE4EC;
     background-color: #EC407A;
     border: 0 !important;
+}
+.success-message h3 {
+    margin: auto;
+    padding: 10px;
 }
 @keyframes scaleBlack {
 	0% {

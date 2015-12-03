@@ -27,7 +27,6 @@ $(document).ready(function () {
 
     var tooltipOpen = false;
     $contactMe.on("click", function() {
-            console.log("Pressed");
             if (!tooltipOpen) {
                 $("#modal").addClass("modal-in-view");
                 $("body").css({'z-index' : '-1'});
@@ -41,6 +40,30 @@ $(document).ready(function () {
     $("#close-modal").on("click", function() {
         $("#modal").removeClass("modal-in-view");
         tooltipOpen = false;
+    });
+    
+    // Initially success message is hidden
+    $(".success-message").hide();
+    $("#message-form").on("submit", function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: "//formspree.io/kidouchi@andrew.cmu.edu",
+            method: "POST",
+            data: {message: $("textarea[name='message']").val()},
+            dataType: "json"
+        }).success(function(data) {
+            console.log("YES");
+            $(".form-container").hide();
+            $(".success-message").show();
+            window.setTimeout(function() {
+                $("#modal").removeClass("modal-in-view");
+                tooltipOpen = false;
+            }, 1000);
+            // After window closes, reset modal
+            $(".form-container").show();
+            $("#message-form")[0].reset();
+            $(".success-message").hide();
+        });
     });
     
     $(window).scroll(function() {
