@@ -458,9 +458,10 @@ img#android-project {
 }
 .app-card {
     font-size: 24px;
-    font-weight: 200;
+    font-weight: 200;    
     width: 250px;
     height: 280px;
+    padding-top: 20px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -470,6 +471,12 @@ img#android-project {
     -moz-box-shadow: 2px 2px 2px 2px #BDBDBD;
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.12), 
                 0px 1px 3px 0px rgba(0,0,0,0.24);
+}
+.app-card > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .app-card:hover {
     -webkit-box-shadow: 2px 2px 2px 2px #BDBDBD;
@@ -503,13 +510,24 @@ img#android-project {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 57px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 .project-section {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;    
     display: flex;
     flex-wrap: wrap;
+}
+.project-section > a {
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    width: 20%;               /* For old syntax, otherwise collapses. */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;  
+    position: relative;
 }
 a.app_redirect_button {
     display: block;
