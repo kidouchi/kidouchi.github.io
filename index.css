@@ -487,6 +487,7 @@ img#android-project {
 }
 .app-card.android {
     background: url(images/icons/android_watermark.png); 
+    background-color: gray;
 }
 .app-card.android img {
     display: block;
