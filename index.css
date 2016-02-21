@@ -74,7 +74,7 @@ div.main-body {
 div#my-name {
     position: absolute;
     display: block;
-    top: 35%;
+    top: 20%;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -232,34 +232,26 @@ img#mypic {
     -webkit-box-shadow: 3px 5px 10px 1px #424242;
     -moz-box-shadow: 3px 5px 10px 1px #424242;
 }
-#contact-me {
-    position: absolute;
-    display: block;
-    width: 145px;
-    height: 145px;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #000;
-    opacity: 0;
-}
 #contact-me > img {
-    height: 100%;
-    display: inline-block;
-    margin: auto;
-    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
 }
+/*
 .clear-out {
     animation: scaleClear 0.6s ease-in;
     -webkit-animation: scaleClear 0.6s ease-in;
 }
-#contact-me:hover {
+*/
+#contact-me > img:hover {
+    opacity: 1;
+/*
     animation: scaleBlack 0.6s ease-out;
 	-webkit-animation: scaleBlack 0.6s ease-out;
 
 	visibility: visible !important;	
     opacity: 0.6;
+*/
 }
 #modal {
     position: fixed;

@@ -17,19 +17,20 @@ $(document).ready(function () {
 //    });
     
     var $contactMe = $("#contact-me");
-    $contactMe.hover(
-        function() {
-            $contactMe.removeClass("clear-out");
-        }, 
-        function () {
-            $contactMe.addClass("clear-out");
-        });
+//    $contactMe.hover(
+//        function() {
+//            $contactMe.removeClass("clear-out");
+//        }, 
+//        function () {
+//            $contactMe.addClass("clear-out");
+//        });
 
     var tooltipOpen = false;
     $contactMe.on("click", function() {
             if (!tooltipOpen) {
                 // Reset form before showing modal
                 $(".success-message").hide();
+                $(".error-message").hide();
                 $(".message-container").show();
                 $("#message-form")[0].reset(); 
                 // Show modal
@@ -56,13 +57,14 @@ $(document).ready(function () {
             data: {message: $("textarea[name='message']").val()},
             dataType: "json"
         }).success(function(data) {
-            console.log("SUCCESS");
             $(".message-container").hide();
             $(".success-message").show();
             window.setTimeout(function() {
                 $("#modal").removeClass("modal-in-view");
                 tooltipOpen = false;
             }, 1000);
+        }).error(function(data) {
+            $(".error-message").show();
         });
     });
     
