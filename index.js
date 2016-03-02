@@ -1,29 +1,18 @@
 $(document).ready(function () {
     var $window = $(window);
-    
     var $section1 = $("#section-1");
     var $section2 = $("#section-2");
     var $section3 = $("#section-3");
-
-    // Hide the page initially
-//    $section1.hide();
-//    $section2.hide();
-//    $section3.hide();
-//
-//    $window.on("load", function() {
-//        $section1.show();
-//        $section2.show();
-//        $section3.show();    
+    
+//    $(window).resize(function() {
+//        console.log("called");
+//        if ($(window).width() <= 900) {
+//            $("#navbar").hide();
+//            $(".page-body").css({'width': '100%'});
+//        } 
 //    });
     
     var $contactMe = $("#contact-me");
-//    $contactMe.hover(
-//        function() {
-//            $contactMe.removeClass("clear-out");
-//        }, 
-//        function () {
-//            $contactMe.addClass("clear-out");
-//        });
 
     var tooltipOpen = false;
     $contactMe.on("click", function() {
@@ -68,87 +57,31 @@ $(document).ready(function () {
         });
     });
     
+    var $aboutItem = $("#about-item");
+    var $resumeItem = $("#resume-item");
+    var $projectItem = $("#project-item");
+     
     $(window).scroll(function() {
         /* TODO: Refactor using helper functions */
         /* Navbar header animation as user scrolls to certain sections */
         if ($window.scrollTop() >= ($section1.offset().top-400)
            && $window.scrollTop() < ($section2.offset().top-200)) {
-            $("#about-item").css({
-                'transition': 'transform 200ms ease-out',
-                '-webkit-transform': 'scale(1.3) translateX(30px)',
-                '-ms-transform': 'scale(1.3) translateX(30px)',
-                'transform': 'scale(1.3) translateX(30px)'
-            });
-            $("#resume-item").css({
-                'transition': 'transform 200ms ease-in',
-                '-webkit-transform': 'scale(1) translateX(0)',
-                '-ms-transform': 'scale(1) translateX(0)',
-                'transform': 'scale(1) translateX(0)'
-            });
-            $("#project-item").css({
-                'transition': 'transform 200ms ease-in',
-                '-webkit-transform': 'scale(1) translateX(0)',
-                '-ms-transform': 'scale(1) translateX(0)',
-                'transform': 'scale(1) translateX(0)'
-            });
+            $aboutItem.css({ 'border-bottom': '3px solid #29B6F6' });
+            $resumeItem.css({ 'border-bottom': 'none' });
+            $projectItem.css({ 'border-bottom': 'none' });
         } else if (($window.scrollTop() >= $section2.offset().top-200) && 
                    ($window.scrollTop() < $section3.offset().top-500)) {
-            $("#about-item").css({
-                'transition': 'transform 200ms ease-in',
-                '-webkit-transform': 'scale(1) translateX(0)',
-                '-ms-transform': 'scale(1) translateX(0)',
-                'transform': 'scale(1) translateX(0)'
-            });
-            $("#resume-item").css({
-                'transition': 'transform 200ms ease-out',
-                '-webkit-transform': 'scale(1.3) translateX(30px)',
-                '-ms-transform': 'scale(1.3) translateX(30px)',
-                'transform': 'scale(1.3) translateX(30px)'
-            });
-            $("#project-item").css({
-                'transition': 'transform 200ms ease-in',
-                '-webkit-transform': 'scale(1) translateX(0)',
-                '-ms-transform': 'scale(1) translateX(0)',
-                'transform': 'scale(1) translateX(0)'
-            });
+            $aboutItem.css({ 'border-bottom': 'none' });
+            $resumeItem.css({ 'border-bottom': '3px solid #29B6F6' });
+            $projectItem.css({ 'border-bottom': 'none' });
         } else if ($window.scrollTop() >= $section3.offset().top-500) {
-             $("#about-item").css({
-                'transition': 'transform 200ms ease-in',
-                '-webkit-transform': 'scale(1) translateX(0)',
-                '-ms-transform': 'scale(1) translateX(0)',
-                'transform': 'scale(1) translateX(0)'
-            });
-            $("#resume-item").css({
-                'transition': 'transform 200ms ease-in',
-                '-webkit-transform': 'scale(1) translateX(0)',
-                '-ms-transform': 'scale(1) translateX(0)',
-                'transform': 'scale(1) translateX(0)'
-            });
-            $("#project-item").css({
-                'transition': 'transform 200ms ease-out',
-                '-webkit-transform': 'scale(1.3) translateX(30px)',
-                '-ms-transform': 'scale(1.3) translateX(30px)',
-                'transform': 'scale(1.3) translateX(30px)'
-            });
+             $aboutItem.css({ 'border-bottom': 'none' });
+            $resumeItem.css({ 'border-bottom': 'none' });
+            $projectItem.css({ 'border-bottom': '3px solid #29B6F6' });
         } else { // reset everything
-            $("#about-item").css({
-                'transition': 'transform 200ms ease-in',
-                '-webkit-transform': 'scale(1) translateX(0)',
-                '-ms-transform': 'scale(1) translateX(0)',
-                'transform': 'scale(1) translateX(0)'
-            });
-            $("#resume-item").css({
-                'transition': 'transform 200ms ease-in',
-                '-webkit-transform': 'scale(1) translateX(0)',
-                '-ms-transform': 'scale(1) translateX(0)',
-                'transform': 'scale(1) translateX(0)'
-            });
-            $("#project-item").css({
-                'transition': 'transform 200ms ease-in',
-                '-webkit-transform': 'scale(1) translateX(0px)',
-                '-ms-transform': 'scale(1) translateX(0px)',
-                'transform': 'scale(1) translateX(0px)'
-            });
+            $aboutItem.css({ 'border-bottom': '3px solid #29B6F6' });
+            $resumeItem.css({ 'border-bottom': 'none' });
+            $projectItem.css({ 'border-bottom': 'none' });
         }
     });
     
