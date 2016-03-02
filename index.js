@@ -2,16 +2,7 @@ $(document).ready(function () {
     var $window = $(window);
     var $section1 = $("#section-1");
     var $section2 = $("#section-2");
-    var $section3 = $("#section-3");
-    
-//    $(window).resize(function() {
-//        console.log("called");
-//        if ($(window).width() <= 900) {
-//            $("#navbar").hide();
-//            $(".page-body").css({'width': '100%'});
-//        } 
-//    });
-    
+    var $section3 = $("#section-3");     
     var $contactMe = $("#contact-me");
 
     var tooltipOpen = false;
